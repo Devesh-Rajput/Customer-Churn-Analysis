@@ -1,51 +1,49 @@
-# Customer Churn Analysis & Customer Intelligence
+#  Customer Churn Analysis & Customer Intelligence
 
-An end-to-end Data Analytics project that analyzes customer churn behavior for a subscription-based platform. The project combines SQL, Python, data visualization, and business intelligence techniques to identify churn patterns, customer segments, revenue loss, and retention opportunities.
+An end-to-end Data Analytics project that analyzes customer churn behavior using **PostgreSQL**, **Python**, and data visualization techniques. This project combines SQL querying, data cleaning, feature engineering, exploratory data analysis (EDA), KPI generation, and business intelligence to uncover customer churn patterns and provide actionable retention strategies.
 
 ---
 
-## 📌 Project Overview
+## 📌 Overview
 
-Customer churn is one of the most important business metrics for subscription-based companies. This project analyzes customer demographics, subscription information, and customer support interactions to understand:
+Customer churn is one of the most critical business challenges for subscription-based companies. Losing customers directly impacts revenue and long-term growth.
 
-- Which customers are churning
-- Why they are leaving
-- Which customer segments are at high risk
-- Revenue impact of churn
-- Actionable business recommendations to improve customer retention
+This project performs an in-depth churn analysis by integrating customer demographics, subscription history, and customer support data from a PostgreSQL database. The objective is to identify high-risk customers, measure business impact, and generate insights that help improve customer retention.
 
-The complete workflow includes SQL data extraction, data cleaning, feature engineering, exploratory data analysis, KPI calculation, visualization, and business insight generation.
+The project demonstrates a complete data analytics workflow from database connectivity to business reporting.
 
 ---
 
 ## 🎯 Objectives
 
-- Analyze customer churn rate
-- Calculate important business KPIs
-- Identify high-risk customer groups
-- Study churn across subscription plans and locations
+- Analyze customer churn behavior
+- Calculate business KPIs
+- Identify high-risk customers
 - Measure revenue loss due to churn
-- Generate actionable retention strategies
+- Analyze customer support impact on churn
+- Compare churn across subscription plans and regions
+- Generate actionable business recommendations
 
 ---
 
-## 🛠 Tech Stack
+# 🛠 Tech Stack
 
-- Python
-- SQL (SQLite)
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Jupyter Notebook
+| Category | Technologies |
+|----------|--------------|
+| Programming Language | Python |
+| Database | PostgreSQL |
+| Database Connectivity | SQLAlchemy, Psycopg2 |
+| Data Manipulation | Pandas, NumPy |
+| Data Visualization | Matplotlib, Seaborn |
+| Development Environment | Jupyter Notebook |
 
 ---
 
-## 📂 Dataset Structure
+# 📂 Database Schema
 
-The project uses three relational tables.
+The project uses a **PostgreSQL relational database** consisting of three interconnected tables.
 
-### Customer Table
+## 1. Customer Table
 
 - Customer ID
 - Name
@@ -56,7 +54,9 @@ The project uses three relational tables.
 - Interests
 - Pincode
 
-### Subscription Table
+---
+
+## 2. Subscription Table
 
 - Customer ID
 - Subscription Start Date
@@ -70,67 +70,87 @@ The project uses three relational tables.
 - Customer Lifetime Value (CLTV)
 - Churn Score
 
-### Support Table
+---
+
+## 3. Support Table
 
 - Customer ID
 - Complaint Date
 - Escalations
-- CSAT Score
+- Customer Satisfaction Score (CSAT)
 - Comments
 
 ---
 
-## ⚙️ Project Workflow
+# 🔄 Project Workflow
 
-### 1. Data Extraction
+## Step 1 — Data Extraction
 
-- Connect SQLite database
-- Retrieve data using SQL queries
-- Merge multiple relational tables
+- Connected Python with PostgreSQL
+- Executed SQL queries
+- Joined multiple relational tables
+- Imported data into Pandas DataFrames
 
-### 2. Data Cleaning
+---
 
-- Handle missing values
-- Rename columns
-- Fix data types
-- Remove inconsistencies
-- Perform quality checks
+## Step 2 — Data Cleaning
 
-### 3. Feature Engineering
+Performed various preprocessing tasks including:
 
-Created additional business metrics such as:
+- Handling missing values
+- Removing duplicates
+- Correcting data types
+- Renaming columns
+- Data quality checks
+- Formatting date columns
+
+---
+
+## Step 3 — Feature Engineering
+
+Created additional business features such as:
 
 - Customer Tenure
-- Active Customers
+- Active Customer Flag
 - Churn Flag
 - Retention Status
-- Revenue Metrics
 - Customer Age
+- Revenue Metrics
+- Service Usage Duration
 
-### 4. Exploratory Data Analysis
+---
 
-Performed analysis using:
+## Step 4 — Exploratory Data Analysis (EDA)
 
-- GroupBy
-- Aggregations
+Performed detailed analysis using
+
+- GroupBy Operations
+- Aggregate Functions
 - Pivot Tables
-- Statistical summaries
+- Customer Segmentation
+- Distribution Analysis
+- Correlation Analysis
 
-### 5. Data Visualization
+---
 
-Visualizations include:
+## Step 5 — Data Visualization
 
-- Churn Distribution
+Generated visualizations including
+
+- Customer Churn Distribution
 - Churn by Subscription Plan
 - Churn by State
 - Monthly Churn Trend
 - Revenue Analysis
 - Customer Segmentation
 - Customer Tenure Distribution
+- Support Escalation Analysis
 
 ---
 
-## 📈 Key Performance Indicators (KPIs)
+# 📈 Key Performance Indicators (KPIs)
+
+The following business KPIs were calculated:
 
 - Customer Churn Rate
 - Retention Rate
@@ -138,24 +158,49 @@ Visualizations include:
 - Customer Lifetime Value (CLTV)
 - Revenue at Risk
 - Average Customer Tenure
-- Churn by Plan Type
+- Churn by Subscription Plan
 - Churn by State
+- Monthly vs Annual Contract Churn
 - Escalation Rate
 - Average Complaints per Customer
 - Support Escalation vs Churn Correlation
 
 ---
 
-## 📊 Business Insights
+# 📊 Business Questions Answered
 
-The analysis helps answer questions such as:
-
-- Which subscription plans have the highest churn?
-- Which regions contribute the most to customer loss?
-- What is the revenue impact of churn?
-- Does customer support affect churn?
-- Which customer segments should be targeted first?
-- How does contract type influence retention?
+- Which subscription plans experience the highest churn?
+- Which states contribute the most to customer churn?
+- What is the average customer lifetime?
+- How much revenue is at risk due to churn?
+- Does customer support influence churn?
+- Which customers should be prioritized for retention?
+- How does contract type affect customer retention?
 
 ---
 
+# 💡 Business Insights
+
+The analysis provides insights into:
+
+- Customer churn trends
+- Customer retention performance
+- Revenue leakage
+- Customer lifetime value
+- High-risk customer identification
+- Subscription performance
+- Customer support effectiveness
+
+---
+
+# 📚 Python Libraries Used
+
+```python
+pandas
+numpy
+matplotlib
+seaborn
+sqlalchemy
+psycopg2
+jupyter
+```
